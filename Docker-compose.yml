@@ -1,0 +1,13 @@
+version: "3"
+services:
+  app:
+    container_name: items-api
+    image: node:dubnium
+    volumes:
+      - ./:/src
+    working_dir: /src
+    environment:
+      NODE_ENV: development
+    ports:
+      - 4000:4000
+    command: npm run dev
